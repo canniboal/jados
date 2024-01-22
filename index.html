@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>JADOS - Just Another Day on Solana</title>
+    <meta name="title" content="JADOS - Just Another Day on Solana" />
+    <meta name="description" content="Just Another Day on Solana" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://justanotherdayonsolana.com" />
+    <meta property="og:title" content="JADOS - Just Another Day on Solana" />
+    <meta property="og:description" content="Just Another Day on Solana" />
+    <meta property="og:image" content="https://justanotherdayonsolana.com/bg.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://justanotherdayonsolana.com" />
+    <meta property="twitter:title" content="JADOS - Just Another Day on Solana" />
+    <meta property="twitter:description" content="Just Another Day on Solana" />
+    <meta property="twitter:image" content="https://justanotherdayonsolana.com/bg.jpg" />
+
+<!-- Meta Tags Generated with https://metatags.io -->
+
+    <!-- import styles.css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Add your crazy animations styles here */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .animate-on-scroll.animate {
+            opacity: 1;
+            transform: translateY(360);
+        }
+    </style>
+</head>
+<body onload="playSound()">
+    <div class="gradient-background">
+        <section style="text-align:center;">
+           
+            <div style="height: 50vh;text-align:center;background:url(./bg.jpg); background-size:cover;max-width:100%;"></div>
+            <button onclick="playSound()" STYLE="width:100%; padding:20px;background-color:red;">PLAY DA FAKEN TUNE</button>
+            <img src="img/1.jpg" alt="" class="animate-on-scroll">
+            <img src="img/2.jpg" alt="" class="animate-on-scroll">
+            <img src="img/3.jpg" alt="" class="animate-on-scroll">
+            <img src="img/4.jpg" alt="" class="animate-on-scroll">
+            <img src="img/5.jpg" alt="" class="animate-on-scroll">
+            <img src="img/6.jpg" alt="" class="animate-on-scroll">
+            <img src="img/7.jpg" alt="" class="animate-on-scroll">
+            <img src="img/8.jpg" alt="" class="animate-on-scroll">
+            <img src="img/9.jpg" alt="" class="animate-on-scroll">
+            <img src="img/10.jpg" alt="" class="animate-on-scroll">
+            <img src="img/11.jpg" alt="" class="animate-on-scroll">
+            <img src="img/12.jpg" alt="" class="animate-on-scroll">
+            <img src="img/13.jpg" alt="" class="animate-on-scroll">
+            <img src="img/14.jpg" alt="" class="animate-on-scroll">
+            <img src="img/15.jpg" alt="" class="animate-on-scroll">
+            <img src="img/16.jpg" alt="" class="animate-on-scroll">
+            <img src="img/17.jpg" alt="" class="animate-on-scroll">
+            <img src="img/18.jpg" alt="" class="animate-on-scroll">
+            <img src="img/19.jpg" alt="" class="animate-on-scroll">
+            <img src="img/20.jpg" alt="" class="animate-on-scroll">
+            <img src="img/21.jpg" alt="" class="animate-on-scroll">
+            <img src="img/22.jpg" alt="" class="animate-on-scroll">
+        </section>
+    </div>
+
+    <footer style="color:white;width:100%;margin:0 auto; text-align:center;">
+       
+    </footer>
+
+    <script>
+        // Add your JavaScript code here
+        var audio = new Audio('JADOS.mp3');
+        var isPlaying = false;
+
+        function playSound() {
+            if (isPlaying) {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+            audio.play();
+            isPlaying = true;
+        }
+
+        window.addEventListener('scroll', function() {
+            var elements = document.querySelectorAll('.animate-on-scroll');
+            for (var i = 0; i < elements.length; i++) {
+                var element = elements[i];
+                var position = element.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+                if (position < windowHeight) {
+                    element.classList.add('animate');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
