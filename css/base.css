@@ -33,7 +33,7 @@
     --cursor-blend-mode: overlay;
     --gradient-text-1: #85f2c3;
     --gradient-text-2: rgb(246 99 115);
-    background-image: url(../img/bg2.jpg);
+    background-image: url(../img/bg7.jpg);
 }
 
 .demo-3 {
@@ -75,7 +75,8 @@
 	--cursor-blend-mode: none;
 	background-image: url(../img/bg7.jpg);
 	--cursor-radius: 50%;
-	background-size:100%;
+	color:black;
+	background-size:contain;
 	background-repeat:no-repeat;
 }
 
@@ -85,11 +86,11 @@
 	--gradient-text-2: rgb(94 85 147);
 	--cursor-radius: 50%;
 	--cursor-blend-mode: color-burn;
-	background-image: url(../img/bg7.jpg);
+	background-image: url(../img/bg7-mobile.jpg);
 	background-size:cover;
 	color:white;
 }
-
+/* media query for mobile */
 .demo-8 {
 	--cursor-bg: radial-gradient(#fddc6d 10%,transparent);
 	--gradient-text-1: #000;
@@ -359,4 +360,18 @@ a.frame__demos-item {
 	.content {
 		align-items: center;
 	}
+	
+}
+/* mobile media query */
+
+@media screen and (max-width: 53em) {
+	.demo-6 {
+		--cursor-bg: #1d3d29;
+		--cursor-blend-mode: overlay;
+		--gradient-text-1: #490b55;
+		--gradient-text-2: rgb(48, 48, 48);
+		background-image: url(../img/bg6-mob.jpg);
+		backround-size:cover;
+	}
+	
 }
