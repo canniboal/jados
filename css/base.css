@@ -364,7 +364,7 @@ a.frame__demos-item {
 }
 /* mobile media query */
 
-@media screen and (max-width: 53em) {
+@media screen and (max-width: 600px) {
 	.demo-6 {
 		--cursor-bg: #1d3d29;
 		--cursor-blend-mode: overlay;
