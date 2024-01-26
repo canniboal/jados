@@ -30,7 +30,7 @@
 			<div class="frame">
 				<div class="frame__title" style="margin:0 auto;"> 
 					<a href="/">
-						<h1 class="frame__title-main">$JADOS</h1> 
+						<h1 class="frame__title-main" style="color:white;">$JADOS</h1> 
 					</a>
 					<div style="padding:0 10px; ">
 						<a href="https://x.com/jados_sol?s=21" style="color:white;padding:0 10px;">X</a>
@@ -42,8 +42,8 @@
 				
 				<div class="" style="margin:0 auto; padding:10px;">
 					<a href="/tokenomics.html"><button style="padding:15px;background-color:purple;color:white;border-radius:15px;">Tokenomics</button></a>
-					<a href="https://raydium.io/swap/?inputCurrency=F9YehCMjZEdvuTgo2LXg7wT287YFhqwNFPjqcvBASRmz&outputCurrency=So11111111111111111111111111111111111111112&fixed=in" target="_blank"><button style="padding:15px;background-color:purple;color:white;border-radius:15px;">Raydium</button></a>
-					<a href="https://dexscreener.com/solana/F9YehCMjZEdvuTgo2LXg7wT287YFhqwNFPjqcvBASRmz"><button style="padding:15px;background-color:purple;color:white;border-radius:15px;">Dex - Chart</button></a>
+					<a href="https://raydium.io/swap/?inputCurrency=F9YehCMjZEdvuTgo2LXg7wT287YFhqwNFPjqcvBASRmz&outputCurrency=So11111111111111111111111111111111111111112&fixed=in" target="_blank"><button style="padding:15px;background-color:purple;color:white;border-radius:15px;">Buy - Raydium</button></a>
+					<a href="https://dexscreener.com/solana/F9YehCMjZEdvuTgo2LXg7wT287YFhqwNFPjqcvBASRmz"><button style="padding:15px;background-color:purple;color:white;border-radius:15px;" target="_blank">Dex - Chart</button></a>
 				</div>
 
 			</div>
@@ -65,18 +65,29 @@
 		<script src="js/gsap.min.js"></script>
 		<script type="module" src="js/index.js"></script>
 		<script>
-			 // Add your JavaScript code here
-			 var audio = new Audio('jados3.mp3');
-       		 var isPlaying = false;
+			// Add your JavaScript code here
+			var audio = new Audio('JADOS.mp3');
+			var audio2 = new Audio('jados3.mp3');
+			   var isPlaying = false;
 
-        function playSound() {
-            if (isPlaying) {
-                audio.pause();
-                audio.currentTime = 0;
-            }
-            audio.play();
-            isPlaying = true;
-        }
-		</script>
+function playSound() {
+   if (isPlaying) {
+	   audio.pause();
+	   audio.currentTime = 0;
+	   audio2.play();
+	   if(audio2.currentTime > 0) {
+		   audio2.currentTime = 0;
+		   audio2.pause();
+		   audio.play();
+	   }
+   } else {
+	   audio.pause();
+	   audio.currentTime = 0;
+	   audio2.pause();
+	   audio2.currentTime = 0;
+   }
+
+   isPlaying = !isPlaying;
+}
 	</body>
 </html>
